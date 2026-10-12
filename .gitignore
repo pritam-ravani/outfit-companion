@@ -1,0 +1,42 @@
+# ── Personal data — keep local, never publish ─────────────────────────────
+# Fill in the real files locally; the repository ships `.example` templates
+# so nothing personal is ever committed.
+
+# Profile / wardrobe / wishlist / lookbook are YOUR data.
+/data/profile.md
+/data/wardrobe.md
+/data/wishlist.md
+/data/lookbook.md
+
+# Your actual photos.
+/data/photos/*
+!/data/photos/README.md
+
+# On-you renders, the avatar, and the local gallery built from your photos.
+/data/generated/
+
+# Downloaded inspiration images (pins, lookbooks, street style).
+/data/inspiration/
+
+# Curated collections and moodboards are outputs of your data.
+/data/collections/office.md
+/data/collections/street.md
+/data/collections/occasion.md
+/data/moodboards/*.html
+
+# Pinterest board dumps (JSON + summaries).
+/data/boards/*
+!/data/boards/README.md
+
+# ── Local image-generation tooling ───────────────────────────────────────
+# These hold machine-specific paths and a local server address; keep them
+# off the public repo.
+/scripts/gen_avatar.pl
+/scripts/gen_retry.pl
+/scripts/gen_retry9.pl
+/scripts/gen_lookbook.pl
+/scripts/test_edit.pl
+/scripts/generate_avatar.py
+
+# ── Playwright MCP debug logs ────────────────────────────────────────────
+.playwright-mcp/

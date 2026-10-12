@@ -1,0 +1,29 @@
+{
+  "skill_name": "fashion-companion",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have my cousin's wedding in a cold northern city this January. I'm from a hot, humid coastal city so I basically never deal with cold. What should I wear from what I already own, and do I need to buy anything?",
+      "expected_output": "A region-aware outfit recommendation: recognizes the destination is much colder than home, dresses for actual cold with proper layering/insulation, builds from the user's wardrobe first, names a concrete gap to buy only if needed, and explains why in terms of fit and warmth.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My style is basically minimal and neutral — lots of beige, white and black, oversized shirts, clean white sneakers, nothing loud. Can you make me a moodboard for it?",
+      "expected_output": "A self-contained HTML moodboard written to data/moodboards/ that visualizes the described style: a neutral color palette with hex swatches, style keywords, flattering silhouettes, fabrics, and an avoid list — rather than asking the user to build it themselves.",
+      "files": ["data/moodboards/everyday.html"]
+    },
+    {
+      "id": 3,
+      "prompt": "Add this Pinterest board to my inspiration: https://www.pinterest.com/someuser/minimal-menswear/ — and tell me what these outfits have in common.",
+      "expected_output": "Attempts to read the board (WebFetch/RSS or the API script), falls back gracefully to asking for saved images if blocked, and extracts the recurring style pattern (silhouettes, colors, vibe) into the profile or inspiration notes rather than just listing pins.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "What's trending for fall/winter 2026, and which of those trends would actually suit me?",
+      "expected_output": "A short trend report from recent sources, with each trend filtered against the user's color season, body shape, budget and taste — labeling what suits them vs. what doesn't, and giving a cheap entry point to try each suitable one.",
+      "files": []
+    }
+  ]
+}
